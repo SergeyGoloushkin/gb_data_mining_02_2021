@@ -5,5 +5,5 @@ username = 'SergeyGoloushkin'
 response = requests.get(f'{url}/users/{username}/repos')
 with open('gh_repos_json', 'w') as file:
     j_data = response.json()
-for repos in response.json():
+for repos in j_data:
    print(repos['name'])
